@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=HiPER Calc
+Icon=HiPERCalc
+Exec=hipercalc
+Terminal=false
+Categories=Utility;

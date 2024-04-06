@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+hipercalc_path="$(dirname "$0")/HiPERCalc"
+
+if [ -n "$XDG_CONFIG_HOME" ]
+then
+	export APPDATA="$XDG_CONFIG_HOME"
+else
+	export APPDATA="$HOME/.config"
+fi
+
+exec java \
+	--add-exports java.desktop/com.sun.java.swing.plaf.gtk=ALL-UNNAMED \
+	-classpath "$hipercalc_path" \
+	cz.hipercalc.CalculatorApp
